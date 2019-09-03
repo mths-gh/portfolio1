@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link href="https://fonts.googleapis.com/css?family=Prata&display=swap" rel="stylesheet">
+  <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="title" id="top">No Description<br>by Design</h1>
+    <h2 class="name">Hikaru Motohashi's Portfolio</h2>
+    <p class="select"><a href="#about">About</a></p>
+    <p class="select"><a href="#product">Product</a></p>
+    <p class="select"><a href="#skills">Skills</a></p>
+  </header>
+  <section class="about" id="about">
+    <h3 class="heading"><a class="heading-link" href="#top">About</a></h3>
+    <div class="image-wrapper clearfix">
+      <div class="image hkbs"></div>
+      <div class="image hkdsc2"></div>
+    </div>
+    <p class="desc">1996年生まれ。小学校から高校までバスケットボール部に所属し、<br>大学でもサークルで続けるほどバスケに打ち込んでいます。</p>
+    <p class="desc">大学３〜４年にかけてベンチャー企業でインターンをし、<br>そこでSNS運用や動画制作などのクリエイティブ業を経験しました。</p>
+    <p class="desc">今夏にプログラミングを始め、HTML/CSS/jQueryなど<br>フロントエンド言語の学習をしています。</p>
+  </section>
+  <section class="product" id="product">
+    <h3 class="heading"><a class="heading-link" href="#top">Products</a></h3>
+    <div class="link-wrapper clearfix">
+      <a class="link washoku" href="https://mths-gh.github.io/washoku.github.io/" target="_blank"><img class="image" src="washoku.png" width="500px" height="250px"></a>
+      <a class="link kaden" href="https://mths-gh.github.io/kadensite.github.io/" target="_blank"><img class="image" src="kaden.png" width="500px" height="250px"></a>
+    </div>
+  </section>
+  <section class="skills" id="skills">
+    <h3 class="heading"><a class="heading-link" href="#top">Skills</a></h3>
+    <div class="skill-wrapper clearfix">
+      <div class="skill-box">
+        <i class="fab fa-html5"></i>
+        <h4 class="title">HTML5</h4>
+        <p class="desc">ゼロからコーディングしてランディングページをつくることができます</p>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-css3-alt"></i>
+        <h4 class="title">CSS3</h4>
+        <p class="desc">要素の色、大きさ、配置を変えてページをポップに仕上げることができます。</p>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-js"></i>
+        <h4 class="title">JavaScript</h4>
+        <p class="desc">jQueryの基本を理解して、簡単なアニメーションを付与することができます。</p>
+      </div>
+      <div class="skill-box">
+        <i class="fab fa-adobe"></i>
+        <h4 class="title">Ps, Pr, Ae</h4>
+        <p class="desc">画像の切り取りから、映像のカット編集、エフェクト、アニメーション作成経験があります。</p>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    ©️hikarumotohashi
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script>
+    $(function() {
+      $('a[href^="#"]').click(function(){
+        var speed = 950;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top;
+        $("html, body").animate({scrollTop:position}, speed, 'easeOutQuart');
+        return false;
+      });
+    });
+  </script>
+</body>
+</html>
