@@ -1,2 +1,2 @@
 # portfolio1
-My portfolio. HTML, CSS, and jQuery(used 'smooth scroll'). responsive.
+My portfolio. HTML, CSS, and jQuery(used 'smooth scroll'). Responsive.
